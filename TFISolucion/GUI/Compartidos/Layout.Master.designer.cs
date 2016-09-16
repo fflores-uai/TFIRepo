@@ -7,19 +7,19 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TFI.GUI.Shared {
+namespace TFI.GUI.Compartidos {
     
     
     public partial class Layout {
         
         /// <summary>
-        /// Control headContent.
+        /// Control elHead.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder headContent;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder elHead;
         
         /// <summary>
         /// Control siteMap.

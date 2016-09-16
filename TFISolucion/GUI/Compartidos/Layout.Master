@@ -1,20 +1,20 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="TFI.GUI.Shared.Layout" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="TFI.GUI.Compartidos.Layout" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../Estilos/thirdparty/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Estilos/BaseStyle.css" rel="stylesheet" />
+
     <title></title>
-
-    <link href="../Content/thirdparty/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Content/BaseStyle.css" rel="stylesheet" />
-
-    <asp:ContentPlaceHolder ID="headContent" runat="server">
+      
+    <asp:ContentPlaceHolder ID="elHead" runat="server">
+        <%--Contenido del Head--%>
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%-- TODO: Cambiar HEADER a gusto --%>
     <header class="navbar navbar-fixed-top" id="top">
         <div class="container">
             <div class="navbar-header">

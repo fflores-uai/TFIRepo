@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TFI.GUI.Shared {
+namespace TFI.GUI.Compartidos {
     
     
     public partial class Error {

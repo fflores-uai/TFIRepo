@@ -57,32 +57,32 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\BaseStyle.css" />
-    <Content Include="Content\thirdparty\bootstrap-theme.css" />
-    <Content Include="Content\thirdparty\bootstrap-theme.min.css" />
-    <Content Include="Content\thirdparty\bootstrap.css" />
-    <Content Include="Content\thirdparty\bootstrap.min.css" />
+    <Content Include="Estilos\BaseStyle.css" />
+    <Content Include="Estilos\thirdparty\bootstrap-theme.css" />
+    <Content Include="Estilos\thirdparty\bootstrap-theme.min.css" />
+    <Content Include="Estilos\thirdparty\bootstrap.css" />
+    <Content Include="Estilos\thirdparty\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\thirdparty\bootstrap-theme.min.css.map" />
-    <Content Include="Content\thirdparty\bootstrap-theme.css.map" />
-    <Content Include="Content\thirdparty\bootstrap.min.css.map" />
-    <Content Include="Content\thirdparty\bootstrap.css.map" />
+    <Content Include="Estilos\thirdparty\bootstrap-theme.min.css.map" />
+    <Content Include="Estilos\thirdparty\bootstrap-theme.css.map" />
+    <Content Include="Estilos\thirdparty\bootstrap.min.css.map" />
+    <Content Include="Estilos\thirdparty\bootstrap.css.map" />
     <Content Include="fonts\bungee.ttf" />
     <None Include="Scripts\thirdparty\jquery-1.9.1.intellisense.js" />
     <Content Include="Index.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="Seguridad\Login.aspx" />
     <Content Include="Scripts\thirdparty\bootstrap.js" />
     <Content Include="Scripts\thirdparty\bootstrap.min.js" />
     <Content Include="Scripts\thirdparty\jquery-1.9.1.js" />
     <Content Include="Scripts\thirdparty\jquery-1.9.1.min.js" />
     <Content Include="Scripts\thirdparty\jquery-1.9.1.min.map" />
     <Content Include="packages.config" />
-    <Content Include="Shared\Error.aspx" />
-    <Content Include="Shared\Layout.Master" />
+    <Content Include="Compartidos\Error.aspx" />
+    <Content Include="Compartidos\Layout.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -102,26 +102,26 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Seguridad\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Seguridad\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shared\Error.aspx.cs">
+    <Compile Include="Compartidos\Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Shared\Error.aspx.designer.cs">
+    <Compile Include="Compartidos\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Shared\Layout.Master.cs">
+    <Compile Include="Compartidos\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Shared\Layout.Master.designer.cs">
+    <Compile Include="Compartidos\Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -130,7 +130,6 @@
     <Folder Include="Estaticas\" />
     <Folder Include="Imagenes\" />
     <Folder Include="Intranet\" />
-    <Folder Include="Seguridad\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServerControl1\ServerControl1.csproj">

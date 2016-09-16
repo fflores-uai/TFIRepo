@@ -1,14 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Compartidos/Layout.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="TFI.GUI.Index1" %>
-
-
+﻿<%@ Page Title="Login Page" Language="C#" MasterPageFile="~/Compartidos/Layout.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TFI.GUI.Index" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">
 
-    <form id="Form33" runat="server">
+    <form runat="server">
 
         <asp:TextBox ID="txtUser" runat="server" />
         <asp:Button ID="Button1" runat="server" Text="Button" />
-
     </form>
+
+    
 
 </asp:Content>

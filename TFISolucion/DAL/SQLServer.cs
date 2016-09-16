@@ -58,6 +58,7 @@ namespace TFI.DAL
             finally
             {
                 ConnectionClose();
+                //Pasa por aca a pesar de haber un return en el try?
             }
         }
 
