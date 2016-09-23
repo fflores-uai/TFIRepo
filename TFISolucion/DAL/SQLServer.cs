@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -54,7 +55,7 @@ namespace TFI.DAL
 
                 return true;
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 if (withTransaction)
                     TransactionCancel();

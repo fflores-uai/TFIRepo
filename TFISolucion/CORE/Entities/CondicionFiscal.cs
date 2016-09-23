@@ -2,7 +2,13 @@
 {
     public class CondicionFiscal
     {
-        public int IdCondicionFiscal { get; set; }
+        public enum Options
+        {
+            ConsumidorFinal = 1,
+            ResponsableInscripto = 2
+        }
+
+        public int ID { get; set; }
         public string Descripcion { get; set; }
     }
 }

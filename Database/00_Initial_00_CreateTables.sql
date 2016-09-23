@@ -1,0 +1,27 @@
+USE TFINegocio_dev
+
+CREATE TABLE UsuarioTipo
+(	ID INT NOT NULL,
+	Descripcion VARCHAR(200)
+	CONSTRAINT [PK_UsuarioTipo] PRIMARY KEY([ID]))
+
+
+CREATE TABLE CondicionFiscal
+(	ID INT NOT NULL,
+	Descripcion VARCHAR(200)
+	CONSTRAINT [PK_CondicionFiscal] PRIMARY KEY([ID]))
+
+CREATE TABLE Usuario
+(	ID INT NOT NULL,
+	CondicionFiscalID INT,
+	UsuarioTipoID INT NOT NULL,
+	Nombre VARCHAR(200) NOT NULL,
+	Apellido VARCHAR(200) NOT NULL,
+	Dni VARCHAR(10) ,
+	Email VARCHAR(400) NOT NULL,
+	NetworkID VARCHAR(100) NOT NULL,
+	Clave VARCHAR(200) NOT NULL
+
+CONSTRAINT [PK_Usuario] PRIMARY KEY(ID))
+
+ALTER TABLE Usuario ADD CONSTRAINT FK_Usuario_UsuarioTipo FOREIGN KEY (UsuarioTipoID) REFERENCES UsuarioTipo(ID)

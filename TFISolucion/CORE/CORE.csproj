@@ -47,6 +47,7 @@
     <Compile Include="Entities\Patente.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Entities\UsuarioTipo.cs" />
+    <Compile Include="Helpers\HastableExtension.cs" />
     <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\UsuarioManager.cs" />
     <Compile Include="Mappers\UsuarioMapper.cs" />

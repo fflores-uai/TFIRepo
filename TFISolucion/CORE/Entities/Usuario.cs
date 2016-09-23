@@ -13,7 +13,5 @@
         public string Email { get; set; }
         public string NetworkID { get; set; }
         public string Clave { get; set; }
-
-
     }
 }

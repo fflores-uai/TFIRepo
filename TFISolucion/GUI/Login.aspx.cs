@@ -19,11 +19,20 @@ namespace TFI.GUI
         {
             var user = new Usuario()
             {
+                Apellido = "LOPEZ",
+                Nombre = "JUAN",
+                Email = "test@text.com",
+                Dni = "33444555",
+                CondicionFiscalID = (int)CondicionFiscal.Options.ConsumidorFinal,
+                UsuarioTipoID = (int)UsuarioTipo.Options.Cliente,
                 NetworkID = txtUser.Text,
                 Clave = txtPassword.Text
             };
 
             _manager.Create(user);
+
+ 
+
         }
     }
 }
