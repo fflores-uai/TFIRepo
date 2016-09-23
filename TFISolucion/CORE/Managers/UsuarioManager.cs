@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TFI.CORE.Entities;
+﻿using TFI.CORE.Entities;
 using TFI.CORE.Mappers;
 
 namespace TFI.CORE.Managers
 {
-    public class UsuarioManager
+    public class UsuarioManager : IManager
     {
         private readonly UsuarioMapper _mapper;
 
@@ -20,6 +15,11 @@ namespace TFI.CORE.Managers
         public bool Create(Usuario usuario)
         {
             return _mapper.Create(usuario);
+        }
+
+        public bool Delete(int ID)
+        {
+            return true;
         }
     }
 }

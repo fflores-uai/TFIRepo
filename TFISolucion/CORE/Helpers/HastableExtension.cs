@@ -24,6 +24,7 @@ namespace TFI.CORE.Helpers.Extensions
                     paramenters.Add(string.Format("@{0}", p.Name), p.GetValue(o));
                 }
                 //TODO: Agregar LazyLoading
+                // deberia rellamar para generar el los paramentros, tambien ya sabeindo el nombre del StoreProcedure 
             }
 
             return paramenters;
