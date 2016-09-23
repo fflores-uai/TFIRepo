@@ -39,7 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\CondicionFiscal.cs" />
+    <Compile Include="Entities\Empresa.cs" />
+    <Compile Include="Entities\Familia.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\Pago.cs" />
+    <Compile Include="Entities\Patente.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Entities\UsuarioTipo.cs" />
+    <Compile Include="Managers\IManager.cs" />
+    <Compile Include="Managers\UsuarioManager.cs" />
+    <Compile Include="Mappers\UsuarioMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{f0dc9310-5831-4052-9a86-384f179ca354}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

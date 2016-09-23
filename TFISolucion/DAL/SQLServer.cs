@@ -21,16 +21,20 @@ namespace TFI.DAL
 
         public DataSet Read(string query, Hashtable data)
         {
+            ConnectionOpen();
+
             ConnectionBind(query);
 
             AddParameters(data);
 
             DataSetFill();
 
+            ConnectionClose();
+
             return dataset;
         }
 
-        public bool Write(string query, Hashtable data)
+        public bool Write(string query, Hashtable data, bool withTransaction = true)
         {
             if (IsConnectionClosed())
                 ConnectionOpen();
@@ -39,19 +43,21 @@ namespace TFI.DAL
             {
                 TransactionBegin();
 
-                ConnectionBind(query, withTransaction: true);
+                ConnectionBind(query, withTransaction: withTransaction);
 
                 AddParameters(data);
 
                 var result = CommandExcecute();
 
-                TransactionCommit();
+                if (withTransaction)
+                    TransactionCommit();
 
                 return true;
             }
             catch (System.Exception)
             {
-                TransactionCancel();
+                if (withTransaction)
+                    TransactionCancel();
 
                 return false;
             }

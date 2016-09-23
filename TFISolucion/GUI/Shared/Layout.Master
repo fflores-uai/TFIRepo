@@ -41,6 +41,12 @@
         <asp:SiteMapPath ID="siteMapMaster" runat="server" PathSeparator=" => " RenderCurrentNodeAsLink="false">
         </asp:SiteMapPath>
 
+    </div>
+
+    <div class="container">
+
+        
+
         <asp:ContentPlaceHolder ID="bodyContent" runat="server">
         </asp:ContentPlaceHolder>
     </div>
