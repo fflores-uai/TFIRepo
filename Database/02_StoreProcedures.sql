@@ -14,8 +14,8 @@ CREATE PROCEDURE Usuario_Create
 AS
 BEGIN	
 		
-	SET @ID = (SELECT TOP(1)ID FROM Usuario ORDER BY ID);	
-
+	SET @ID = (SELECT MAX(ID) FROM Usuario);	
+	
 	IF(@ID IS NULL)
 	INSERT INTO Usuario(
 	ID,
@@ -63,3 +63,5 @@ BEGIN
     
 END
 GO
+
+select * from Usuario
