@@ -1,0 +1,10 @@
+﻿namespace TFI.CORE.Helpers
+{
+    public static class Action
+    {
+        public const string Create = "Create";
+        public const string Update = "Update";
+        public const string Find = "Find";
+        public const string FindAll = "FindAll";
+    }
+}

@@ -29,9 +29,9 @@ namespace TFI.GUI
                 Clave = txtPassword.Text
             };
 
-            _manager.Create(user);
+            //_manager.Create(user);
 
- 
+            var u = _manager.Find(2);
 
         }
     }

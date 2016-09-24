@@ -1,0 +1,7 @@
+CREATE PROCEDURE Usuario_Find
+@ID INT
+AS
+BEGIN	
+		SELECT * FROM Usuario WHERE ID = @ID
+END
+GO

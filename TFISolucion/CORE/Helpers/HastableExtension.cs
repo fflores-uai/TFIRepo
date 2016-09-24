@@ -1,29 +1,35 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TFI.CORE.Helpers.Extensions
 {
     public static class HastableExtension
     {
-        public static Hashtable ToHashtable(this Object o)
+        public static Hashtable ToHashtable(this Object o, string Name = null)
         {
             var paramenters = new Hashtable();
 
-            var properties = o.GetType().GetProperties();
-
-            foreach (var p in properties)
+            if (o.GetType().IsPrimitive)
             {
-                if (!p.PropertyType.IsClass
-                    || typeof(String).IsAssignableFrom(p.PropertyType)
-                    || typeof(DateTime).IsAssignableFrom(p.PropertyType))
+                paramenters.Add(string.Format("@{0}", Name), o);
+            }
+
+            if (paramenters.Count == 0)
+            {
+                var properties = o.GetType().GetProperties();
+                foreach (var p in properties)
                 {
-                    paramenters.Add(string.Format("@{0}", p.Name), p.GetValue(o));
+                    if (!p.PropertyType.IsClass
+                        || p.PropertyType.IsPrimitive
+                        || typeof(String).IsAssignableFrom(p.PropertyType)
+                        || typeof(DateTime).IsAssignableFrom(p.PropertyType)
+                        || !typeof(ICollection).IsAssignableFrom(p.PropertyType))
+                    {
+                        paramenters.Add(string.Format("@{0}", p.Name), p.GetValue(o));
+                    }
+
+                    //TODO: Agregar LazyLoading
                 }
-                //TODO: Agregar LazyLoading
             }
 
             return paramenters;

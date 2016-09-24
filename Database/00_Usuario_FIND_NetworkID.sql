@@ -1,0 +1,7 @@
+CREATE PROCEDURE Usuario_Find_NetworkID
+	@NetworkID VARCHAR(100)
+AS
+BEGIN	
+	SELECT * FROM Usuario WHERE NetworkID = @NetworkID
+END
+GO

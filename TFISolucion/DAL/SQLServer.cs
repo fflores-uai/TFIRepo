@@ -9,18 +9,18 @@ namespace TFI.DAL
     public class SQLServer : IConnection
     {
         private SqlConnection cnn;
-        private DataSet dataset;
+        private DataTable datatable;
         private SqlTransaction tr;
         private SqlCommand cmd;
 
         public SQLServer()
         {
-            dataset = new DataSet();
+            datatable = new DataTable();
             cmd = new SqlCommand();
             cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataContext"].ConnectionString);
         }
 
-        public DataSet Read(string query, Hashtable data)
+        public DataTable Read(string query, Hashtable data)
         {
             ConnectionOpen();
 
@@ -28,11 +28,11 @@ namespace TFI.DAL
 
             AddParameters(data);
 
-            DataSetFill();
+            DataTableFill();
 
             ConnectionClose();
 
-            return dataset;
+            return datatable;
         }
 
         public bool Write(string query, Hashtable data, bool withTransaction = true)
@@ -120,10 +120,12 @@ namespace TFI.DAL
 
         #endregion Connection
 
-        private void DataSetFill()
+        private void DataTableFill()
         {
-            var da = new SqlDataAdapter();
-            da.Fill(dataset);
+            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+            {
+                da.Fill(datatable);
+            }
         }
 
         private void AddParameters(System.Collections.Hashtable data)

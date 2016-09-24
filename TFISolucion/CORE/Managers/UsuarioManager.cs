@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TFI.CORE.Entities;
+﻿using TFI.CORE.Entities;
 using TFI.CORE.Mappers;
 
 namespace TFI.CORE.Managers
@@ -20,6 +15,11 @@ namespace TFI.CORE.Managers
         public bool Create(Usuario usuario)
         {
             return _mapper.Create(usuario);
+        }
+
+        public Usuario Find(int id)
+        {
+            return _mapper.Find(id);
         }
     }
 }

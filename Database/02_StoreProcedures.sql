@@ -63,5 +63,3 @@ BEGIN
     
 END
 GO
-
-select * from Usuario
