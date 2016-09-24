@@ -37,6 +37,5 @@ CREATE TABLE LenguajeControl
 	CONSTRAINT [PK_LenguageControl_Lenguage] PRIMARY KEY(Texto,LenguajeID))
 
 
-
 ALTER TABLE Usuario ADD CONSTRAINT [FK_Usuario_UsuarioTipo] FOREIGN KEY (UsuarioTipoID) REFERENCES UsuarioTipo(ID)
 ALTER TABLE LenguajeControl ADD CONSTRAINT [FK_LenguageControl_Lenguage] FOREIGN KEY (LenguajeID) REFERENCES Lenguaje(ID)

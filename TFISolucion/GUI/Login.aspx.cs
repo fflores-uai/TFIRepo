@@ -19,10 +19,10 @@ namespace TFI.GUI
         {
             var user = new Usuario()
             {
-                Apellido = "LOPEZ",
-                Nombre = "JUAN",
-                Email = "test@text.com",
-                Dni = "33444555",
+                Apellido = GenerateRandom(10),
+                Nombre = GenerateRandom(10),
+                Email = GenerateRandomMail(),
+                Dni = GenerateRandom(),
                 CondicionFiscalID = (int)CondicionFiscal.Options.ConsumidorFinal,
                 UsuarioTipoID = (int)UsuarioTipo.Options.Cliente,
                 NetworkID = txtUser.Text,
@@ -32,7 +32,22 @@ namespace TFI.GUI
             //_manager.Create(user);
 
             var u = _manager.Find(2);
-
         }
+
+        private string GenerateRandom(int length)
+        {
+            return Guid.NewGuid().ToString().Substring(0, length);
+        }
+
+        private string GenerateRandomMail()
+        {
+            return string.Format("{0}@{1}.com", GenerateRandom(10), GenerateRandom(5));
+        }
+
+        private string GenerateRandom()
+        {
+            return new Random().Next(0, 99999999).ToString();
+        }
+        
     }
 }
