@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TFI.GUI.Compartidos
+namespace TFI.GUI.General
 {
     public partial class LayoutGeneral : System.Web.UI.MasterPage
     {

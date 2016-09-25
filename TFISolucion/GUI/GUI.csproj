@@ -73,7 +73,7 @@
     <Content Include="Estilos\EstiloBoot\bootstrap.min.css.map" />
     <Content Include="Estilos\EstiloBoot\bootstrap.css.map" />
     <Content Include="fonts\bungee.ttf" />
-    <Content Include="Compartidos\LayoutGeneral.Master" />
+    <Content Include="General\LayoutGeneral.Master" />
     <None Include="Scripts\thirdparty\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\thirdparty\bootstrap.js" />
     <Content Include="Scripts\thirdparty\bootstrap.min.js" />
@@ -100,11 +100,11 @@
     <Compile Include="CatalogoPrinc.aspx.designer.cs">
       <DependentUpon>CatalogoPrinc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Compartidos\LayoutGeneral.Master.cs">
+    <Compile Include="General\LayoutGeneral.Master.cs">
       <DependentUpon>LayoutGeneral.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Compartidos\LayoutGeneral.Master.designer.cs">
+    <Compile Include="General\LayoutGeneral.Master.designer.cs">
       <DependentUpon>LayoutGeneral.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

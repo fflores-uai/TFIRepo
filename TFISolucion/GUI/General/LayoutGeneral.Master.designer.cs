@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TFI.GUI.Compartidos {
+namespace TFI.GUI.General {
     
     
     public partial class LayoutGeneral {

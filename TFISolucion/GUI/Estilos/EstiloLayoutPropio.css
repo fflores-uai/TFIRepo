@@ -1,45 +1,61 @@
-﻿@font-face {
-    font-family: 'bungee';
-    src: url('/fonts/bungee.ttf'); /*Custom Font*/
-}
+﻿/***********************************************************************************************************************/
+/**LAYOUT BASICO**********************/
 
 body {
-    padding-top: 70px
+    padding-top: 70px /*El padding es necesario para que funcione el .navbar-fixed-top*/
 }
 
-.container {
+/*.container {
     font-family: 'Segoe UI';
     color: black;
-}
+}*/
 
-.navbar {
+/*.navbar {
     background-color: #808080;
     border: transparent;
-}
+}*/
 
 /*TODO: Cambiar a gusto*/
 
-.navbar-brand {
+/*.navbar-brand {
     margin-top: 2px;
     padding-top: 5px;
     font-family: 'bungee';
-}
+}*/
 
-#brandName {
+/*#brandName {
     font-size: 20px;
-}
+}*/
 
-#brandSubName {
+/*#brandSubName {
     font-size: 10px;
     font-weight: bold;
     font-weight: 500;
     padding-left: 20px;
-}
+}*/
 
-.navbar a {
+/*.navbar a {
     color: white;
+}*/
+
+    /*.navbar a:focus, a:hover {
+        color: black;
+    }*/
+
+/****************************************************************************************************************************/
+/*DETALLES DE ESTILO*****************************************/
+/*@font-face {
+    font-family: 'bungee';
+    src: url('/fonts/bungee.ttf');
+}*/
+
+
+
+
+
+footer {
+    margin: 20px;
+    background-color: lightgray;
 }
 
-    .navbar a:focus, a:hover {
-        color: black;
-    }
+
