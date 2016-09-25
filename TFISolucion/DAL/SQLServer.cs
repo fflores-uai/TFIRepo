@@ -15,7 +15,6 @@ namespace TFI.DAL
 
         public SQLServer()
         {
-            datatable = new DataTable();
             cmd = new SqlCommand();
             cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataContext"].ConnectionString);
         }
@@ -124,6 +123,7 @@ namespace TFI.DAL
         {
             using (SqlDataAdapter da = new SqlDataAdapter(cmd))
             {
+                datatable = new DataTable();
                 da.Fill(datatable);
             }
         }
