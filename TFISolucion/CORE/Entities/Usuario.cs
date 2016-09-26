@@ -3,6 +3,7 @@
     public class Usuario
     {
         public int ID { get; set; }
+        public int CUIT { get; set; }
         public int CondicionFiscalID { get; set; }
         public CondicionFiscal CondicionFiscal { get; set; }
         public int UsuarioTipoID { get; set; }

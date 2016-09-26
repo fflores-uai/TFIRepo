@@ -43,7 +43,10 @@
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\Familia.cs" />
     <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\Lenguaje.cs" />
+    <Compile Include="Entities\LenguajeControl.cs" />
     <Compile Include="Entities\Pago.cs" />
+    <Compile Include="Entities\PagoTipo.cs" />
     <Compile Include="Entities\Patente.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Entities\UsuarioTipo.cs" />

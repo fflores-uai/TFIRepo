@@ -128,8 +128,6 @@
   <ItemGroup>
     <Folder Include="Controles\" />
     <Folder Include="Estaticas\" />
-    <Folder Include="Imagenes\" />
-    <Folder Include="Intranet\" />
     <Folder Include="Seguridad\" />
   </ItemGroup>
   <ItemGroup>
