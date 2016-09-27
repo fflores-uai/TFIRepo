@@ -55,7 +55,7 @@
     <Compile Include="Helpers\HastableExtension.cs" />
     <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\UsuarioManager.cs" />
-    <Compile Include="Mappers\UsuarioMapper.cs" />
+    <Compile Include="Mappers\Mapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

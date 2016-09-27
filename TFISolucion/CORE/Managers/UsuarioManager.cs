@@ -5,11 +5,11 @@ namespace TFI.CORE.Managers
 {
     public class UsuarioManager
     {
-        private readonly UsuarioMapper _mapper;
+        private readonly Mapper<Usuario> _mapper;
 
         public UsuarioManager()
         {
-            _mapper = new UsuarioMapper();
+            _mapper = new Mapper<Usuario>("Usuario");
         }
 
         public bool Create(Usuario usuario)
