@@ -151,6 +151,24 @@ CREATE TABLE Producto
 	CONSTRAINT [PK_Producto] PRIMARY KEY(IdProducto))
 
 
+--*******************EstadoProducto**************************
+CREATE TABLE EstadoProducto
+(
+	IdEstadoProducto INT NOT NULL identity(1,1),
+	DescripEstadoProducto VARCHAR(200) NOT NULL,
+	CONSTRAINT [PK_EstadoProducto] PRIMARY KEY(IdEstadoProducto))
+
+
+--*******************StockSucursal**************************
+CREATE TABLE StockSucursal
+(
+	IdProducto INT NOT NULL,
+	IdSucursal INT NOT NULL,
+	CantidadProducto INT NOT NULL,
+	CONSTRAINT [PK_StockSucursal] PRIMARY KEY(IdProducto, IdSucursal))
+
+
+
 --*******************Marca**************************
 CREATE TABLE Marca
 (
@@ -436,6 +454,13 @@ ALTER TABLE Pedido ADD CONSTRAINT [FK_Pedido_Direccion] FOREIGN KEY (DireccionEn
 --**Foraneas de Producto************************************************************************
 ALTER TABLE Producto ADD CONSTRAINT [FK_Producto_Marca] FOREIGN KEY (IdMarca) REFERENCES Marca(IdMarca)
 ALTER TABLE Producto ADD CONSTRAINT [FK_Producto_IvaProducto] FOREIGN KEY (IdIvaProducto) REFERENCES IvaProducto(IdIvaProducto)
+ALTER TABLE Producto ADD CONSTRAINT [FK_Producto_Empresa] FOREIGN KEY (CUIT) REFERENCES Empresa(CUIT)
+ALTER TABLE Producto ADD CONSTRAINT [FK_Producto_EstadoProducto] FOREIGN KEY (IdEstadoProducto) REFERENCES EstadoProducto(IdEstadoProducto)
+
+
+--**Foraneas de StockSucursal************************************************************************
+ALTER TABLE StockSucursal ADD CONSTRAINT [FK_StockSucursal_Producto] FOREIGN KEY (IdProducto) REFERENCES Producto(IdProducto)
+ALTER TABLE StockSucursal ADD CONSTRAINT [FK_StockSucursal_Sucursal] FOREIGN KEY (IdSucursal) REFERENCES Sucursal(IdSucursal)
 
 
 --**Foraneas de Reserva************************************************************************
