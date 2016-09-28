@@ -5,10 +5,40 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 
-namespace TFI.CORE.Helpers.Extensions
+namespace TFI.DAL.Helpers.Extensions
 {
-    public static class DataTableExtensions
+    public static class MapperExtension
     {
+        public static Hashtable ToHashtable(this Object o, string Name = null)
+        {
+            var paramenters = new Hashtable();
+
+            if (o.GetType().IsPrimitive)
+            {
+                paramenters.Add(string.Format("@{0}", Name), o);
+            }
+
+            if (paramenters.Count == 0)
+            {
+                var properties = o.GetType().GetProperties();
+                foreach (var p in properties)
+                {
+                    if (!p.PropertyType.IsClass
+                        || p.PropertyType.IsPrimitive
+                        || typeof(String).IsAssignableFrom(p.PropertyType)
+                        || typeof(DateTime).IsAssignableFrom(p.PropertyType)
+                        || !typeof(ICollection).IsAssignableFrom(p.PropertyType))
+                    {
+                        paramenters.Add(string.Format("@{0}", p.Name), p.GetValue(o));
+                    }
+
+                    //TODO: Agregar LazyLoading
+                }
+            }
+
+            return paramenters;
+        }
+
         public static List<T> ToList<T>(this DataTable table) where T : new()
         {
             IList<PropertyInfo> properties = typeof(T).GetProperties().ToList();

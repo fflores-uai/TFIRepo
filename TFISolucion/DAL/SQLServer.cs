@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace TFI.DAL
 {
-    public class SQLServer : IConnection
+    internal class SQLServer : IConnection
     {
         private SqlConnection cnn;
         private DataTable datatable;

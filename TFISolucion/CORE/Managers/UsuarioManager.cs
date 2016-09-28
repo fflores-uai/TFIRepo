@@ -1,25 +1,26 @@
 ﻿using TFI.CORE.Entities;
-using TFI.CORE.Mappers;
+using TFI.DAL.Mapper;
 
 namespace TFI.CORE.Managers
 {
     public class UsuarioManager
     {
-        private readonly Mapper<Usuario> _mapper;
+        private const string ENTITY = "Usuario";
+        private readonly Mapper<Usuario> Db;
 
         public UsuarioManager()
         {
-            _mapper = new Mapper<Usuario>("Usuario");
+            Db = new Mapper<Usuario>(ENTITY);
         }
 
         public bool Create(Usuario usuario)
         {
-            return _mapper.Create(usuario);
+            return Db.Add(usuario);
         }
 
         public Usuario Find(int id)
         {
-            return _mapper.Find(id);
+            return Db.Find(id);
         }
     }
 }

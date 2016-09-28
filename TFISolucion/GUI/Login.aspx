@@ -12,7 +12,7 @@
 
     <div class="container">
 
-        <form class="form-signin">
+        <form class="form-signin" runat="server">
             <h2 class="form-signin-heading">INGRESO</h2>
 
             <label for="inputEmail" class="sr-only">Usuario/Email</label>
@@ -31,7 +31,8 @@
                 <p>Olvidaste tu Clave? <a href="#">Click Aqui</a></p>
                 <p>Nuevo en el sitio? <a href="#">Registrate</a></p>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+            <asp:Button ID="btn" CssClass="btn btn-lg btn-primary btn-block" Text="Ingresar" OnClick="btnSubmit_Click" runat="server" />
+            <%--<asp:Button ID="btnSubmit" CssClass="btn btn-lg btn-primary btn-block" type="text" runat="server">Ingresar</asp:Button>--%>
         </form>
     </div>
 

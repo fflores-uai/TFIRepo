@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TFI.CORE.Helpers;
-using TFI.CORE.Helpers.Extensions;
-using TFI.DAL;
+using TFI.DAL.Helpers;
+using TFI.DAL.Helpers.Extensions;
 
-namespace TFI.CORE.Mappers
+namespace TFI.DAL.Mapper
 {
     public class Mapper<TSource> where TSource : new()
     {
@@ -17,7 +16,7 @@ namespace TFI.CORE.Mappers
             this.Entity = Name;
         }
 
-        public bool Create(TSource source)
+        public bool Add(TSource source)
         {
             return conection.Write(Procedure(Action.Create),
                                    source.ToHashtable());

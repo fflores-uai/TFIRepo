@@ -1,4 +1,4 @@
-﻿namespace TFI.CORE.Helpers
+﻿namespace TFI.DAL.Helpers
 {
     public static class Action
     {
