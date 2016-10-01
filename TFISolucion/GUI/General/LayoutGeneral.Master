@@ -34,6 +34,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
+<%--                            Si ponemos esto funciona igual
+                            <a><asp:LinkButton CssClass="Propia1" Text="Home" PostBackUrl="~/CatalogoPrinc.aspx" runat="server"></asp:LinkButton></a>--%>
                             <a href="#">About</a>
                         </li>
                         <li>
