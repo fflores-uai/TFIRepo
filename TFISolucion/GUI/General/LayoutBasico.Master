@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" CodeBehind="LayoutGeneral.master.cs" Inherits="TFI.GUI.General.LayoutGeneral" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LayoutBasico.master.cs" Inherits="TFI.GUI.General.LayoutBasico" %>
 
 <!DOCTYPE html>
 
@@ -50,21 +50,13 @@
         </nav>
 
 
-        <div class="container"> 
-            <div class="row"> <%--Entero--%>
-                            <div class="col-md-3"> <%--categorias--%>
-                                <asp:ContentPlaceHolder ID="ContentPlaceHolderCategorias" runat="server">
-                                </asp:ContentPlaceHolder>
-                            </div> <%--categoriasFIN--%>
+        <div class="container">
+    
 
-                            <div class="col-md-9">   <%--Seccion para el cuerpo de la pagina --%>
-                              
-                                    <asp:ContentPlaceHolder ID="ContentPlaceHolderCuerpo" runat="server">
-                                    </asp:ContentPlaceHolder>
-                            </div> <%--Cuerpo de la pagina--%>
-
-
-            </div> <%--row--%>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderCuerpo" runat="server">
+                </asp:ContentPlaceHolder>
+             
+   
         </div> <%--Contenedor Body--%>
         
         <div class="container">

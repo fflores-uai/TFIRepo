@@ -10,7 +10,7 @@
 namespace TFI.GUI.General {
     
     
-    public partial class LayoutGeneral {
+    public partial class LayoutBasico {
         
         /// <summary>
         /// Control head.
@@ -29,15 +29,6 @@ namespace TFI.GUI.General {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm frmLayoutConBarra;
-        
-        /// <summary>
-        /// Control ContentPlaceHolderCategorias.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderCategorias;
         
         /// <summary>
         /// Control ContentPlaceHolderCuerpo.

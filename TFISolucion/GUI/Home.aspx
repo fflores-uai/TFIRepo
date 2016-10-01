@@ -1,18 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General/LayoutGeneral.Master" AutoEventWireup="true" CodeBehind="CatalogoPrinc.aspx.cs" Inherits="TFI.GUI.CatalogoPrinc" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General/LayoutBasico.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TFI.GUI.Home" %>
 
-<asp:Content ID="ContenidoCategorias" ContentPlaceHolderID="ContentPlaceHolderCategorias" runat="server">
-    <p class="lead">Shop Name</p>
-    <div class="list-group">
-        <a href="#" class="list-group-item">Category 1</a>
-        <a href="#" class="list-group-item">Category 2</a>
-        <a href="#" class="list-group-item">Category 3</a>
-    </div>
-</asp:Content> 
 
 
 <asp:Content ID="ContenidoCuerpo" ContentPlaceHolderID="ContentPlaceHolderCuerpo" runat="server">
     
-                <div class="row carousel-holder">
+               
+        <div class="container">
+             <div class="row carousel-holder">
 
                     <div class="col-md-12">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -43,6 +37,9 @@
 
                 </div>
 
+        </div>
+
+    <div class="container">
                 <div class="row">
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
@@ -164,7 +161,7 @@
 
                 </div>
 
-           
+          </div>
 
 
 </asp:Content>
