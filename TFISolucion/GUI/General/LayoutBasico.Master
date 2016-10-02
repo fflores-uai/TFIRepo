@@ -49,6 +49,36 @@
             </div> <!-- ./Contendor Nav Menu -->
         </nav>
 
+        <div class="container">
+            <div class="row"> <%--Nombre Buscar Pedidos--%>
+                <div class="col-md-4">
+                    <a class="navbar-brand" href="#">GENLOYS - Grupos Electrógenos</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="navbar-brand" href="#">Buscar</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="navbar-brand" href="#">Pedidos</a>
+                </div>
+            </div>
+
+            <div class="row"> <%--Menu Navegacion--%>
+                        <div class="col-md-12">
+			                <ul class="nav nav-pills">
+				                <li class="btn-default">
+					                <a href="#">Home</a>
+				                </li>
+				                <li class="btn-default">
+					                <a href="#">Quienes Somos</a>
+				                </li>
+				                <li class="btn-default">
+					                <a href="#">Clientes</a>
+				                </li>
+			                </ul>
+		                </div>
+	            
+            </div> <%--Menu Navegacion FIN--%>
+        </div> <%--Menu Navegacio Container FIN--%>
 
         <div class="container">
     
