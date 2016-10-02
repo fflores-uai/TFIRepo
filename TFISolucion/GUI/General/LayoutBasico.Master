@@ -15,12 +15,11 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="frmLayoutConBarra" runat="server">
     <div class="container">
+    <form id="frmLayoutConBarra" runat="server">
     <!-- Menu -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
@@ -30,8 +29,14 @@
                     </button>
                     <a class="navbar-brand" href="#">GENLOYS - Grupos Electrógenos</a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
+
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Buscar..">
+                        </div>
+                        <img src="../Imagenes/Buscar.png" />
+                    </div>
                     <ul class="nav navbar-nav">
                         <li>
 <%--                            Si ponemos esto funciona igual
@@ -45,69 +50,130 @@
                             <a href="#">Contact</a>
                         </li>
                     </ul>
-                </div> <!-- ./navbar-collapse -->
-            </div> <!-- ./Contendor Nav Menu -->
+                </div>
+            </div>
         </nav>
+        
 
-        <div class="container">
+
             <div class="row"> <%--Nombre Buscar Pedidos--%>
                 <div class="col-md-4">
-                    <a class="navbar-brand" href="#">GENLOYS - Grupos Electrógenos</a>
+                    <a href="#">GENLOYS - Grupos Electrógenos</a>
                 </div>
                 <div class="col-md-4">
-                    <a class="navbar-brand" href="#">Buscar</a>
+                    <a href="#">Buscar</a>
                 </div>
                 <div class="col-md-4">
-                    <a class="navbar-brand" href="#">Pedidos</a>
+                    <a href="#">Pedidos</a>
                 </div>
             </div>
 
-            <div class="row"> <%--Menu Navegacion--%>
-                        <div class="col-md-12">
-			                <ul class="nav nav-pills">
-				                <li class="btn-default">
-					                <a href="#">Home</a>
-				                </li>
-				                <li class="btn-default">
-					                <a href="#">Quienes Somos</a>
-				                </li>
-				                <li class="btn-default">
-					                <a href="#">Clientes</a>
-				                </li>
-			                </ul>
-		                </div>
-	            
-            </div> <%--Menu Navegacion FIN--%>
-        </div> <%--Menu Navegacio Container FIN--%>
+            <div class="row">
+			<nav class="navbar navbar-default" role="navigation">
+				    <div class="navbar-header">
+					    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="true">
+						    <span class="sr-only">Toggle navigation</span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+					    </button>
+				    </div>
 
-        <div class="container">
-    
-
-                <asp:ContentPlaceHolder ID="ContentPlaceHolderCuerpo" runat="server">
-                </asp:ContentPlaceHolder>
-             
-   
-        </div> <%--Contenedor Body--%>
+				    <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-2" aria-expanded="true">
+					    <nav>
+						    <ul class="nav navbar-nav">
+							    <li><a href="Home.aspx">Inicio</a></li>
+							    <li class="dropdown">
+								    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Productos<b class="caret"></b></a>
+								    <ul class="dropdown-menu multi-column columns-3">
+									    <li>
+									    <div class="col-md-4">
+										    <ul class="multi-column-dropdown">
+											    <li><a href="#">Categoria1</a></li>
+											    <li><a href="#">Categoria2</a></li>
+											    <li><a href="#">Categoria3</a></li>
+											    <li><a href="#">Categoria3</a></li>
+											    <li><a href="#">Categoria3</a></li>
+											    <li><a href="#">Categoria3</a></li>
+											    <li><a href="#">Categoria3</a></li>
+										    </ul>
+									    </div>
+									    <div class="col-md-4">
+										    <ul class="multi-column-dropdown">
+											    <li><a href="#">Categoria4</a></li>
+											    <li><a href="#">Categoria4</a></li>
+											    <li><a href="#">Categoria4</a></li>
+											    <li><a href="#">Categoria4</a></li>
+											    <li><a href="#">Categoria4</a></li>
+										    </ul>
+									    </div>
+									    <div class="col-md-4">
+										    <ul class="multi-column-dropdown">
+											    <li><a href="#">Categoria5</a></li>
+											    <li><a href="#">Categoria5</a></li>
+											    <li><a href="#">Categoria5</a></li>
+											    <li><a href="#">Categoria5</a></li>
+											    <li><a href="#">Categoria5</a></li>
+											    <li><a href="#">Categoria5</a></li>
+										    </ul>
+									    </div>
+									    <div class="clearfix"></div>
+									    </li>
+								    </ul>
+							    </li>
+							    <li><a href="#">Quiénes Somos</a></li>
+							    <li><a href="#">Nuestros Clientes</a></li>
+						    </ul>
+					    </nav>
+				    </div>
+			</nav>	
+            </div>
+		       
+            <div class="row" id="breadcrumb">
+                <asp:SiteMapDataSource ID="siteMap" runat="server" ShowStartingNode="true" />
+                <asp:SiteMapPath ID="siteMapMaster" runat="server" PathSeparator=" => " RenderCurrentNodeAsLink="false">
+                </asp:SiteMapPath>
+            </div>	  
         
-        <div class="container">
-            <footer>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Copyright &copy; GENLOYS SRL</p>
-                    </div>
+            <%--Cuerpo de la Pagina--%>    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderCuerpo" runat="server">
+            </asp:ContentPlaceHolder>
+            <%--FIN Cuerpo de la pagina--%>
+
+        
+            <footer class="container">
+                <div class="row navbar-inverse">
+                    <section class="col-xs-12 col-md-6">
+                        <h4>Información</h4>
+                        <ul class="footer-navigation">
+						    <li class="item">
+					            <a href="#" title="Quiénes Somos">Quiénes Somos</a>
+				            </li>
+                            <li class="item">
+				                <a href="#" title="Contacto">Contacto</a>
+			                </li>
+							<li class="item">
+						        <a href="#" title="Politicas de Privacidad">Politicas de Privacidad</a>
+					        </li>
+							<li>
+				                <a href="#" title="Mapa del sitio">Mapa del sitio</a>
+			                </li>
+					    </ul>                        
+                    </section>
                 </div>
             </footer>
-        </div> <%--./Contenedor Footer--%>
+        
     
- 
     
-    </div> <%--Contenedor Total--%>
+</form>
+</div>
+
 
     <%--Jquery--%>
     <script src="../Scripts/thirdparty/jquery-1.9.1.js"></script>
     <%--Bootstrap scripts--%>
     <script src="../Scripts/thirdparty/bootstrap.min.js"></script>
 
-        </form>
+        
 </body>
 </html>

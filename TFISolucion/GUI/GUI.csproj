@@ -77,6 +77,7 @@
     <Content Include="General\LayoutBasico.Master" />
     <None Include="Scripts\thirdparty\jquery-1.9.1.intellisense.js" />
     <Content Include="Home.aspx" />
+    <Content Include="Imagenes\Buscar.png" />
     <Content Include="Scripts\thirdparty\bootstrap.js" />
     <Content Include="Scripts\thirdparty\bootstrap.min.js" />
     <Content Include="Scripts\thirdparty\jquery-1.9.1.js" />
@@ -128,7 +129,6 @@
   <ItemGroup>
     <Folder Include="Controles\" />
     <Folder Include="Estaticas\" />
-    <Folder Include="Imagenes\" />
     <Folder Include="Intranet\" />
     <Folder Include="Seguridad\" />
   </ItemGroup>
