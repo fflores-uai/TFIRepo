@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CatalogoPrinc.aspx" />
+    <Content Include="ClientesEmpresa.aspx" />
     <Content Include="Estilos\EstiloLayoutPropio.css" />
     <Content Include="Estilos\EstiloBoot\bootstrap-theme.css" />
     <Content Include="Estilos\EstiloBoot\bootstrap-theme.min.css" />
@@ -78,6 +79,7 @@
     <None Include="Scripts\thirdparty\jquery-1.9.1.intellisense.js" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\Buscar.png" />
+    <Content Include="InfoEmpresa.aspx" />
     <Content Include="Scripts\thirdparty\bootstrap.js" />
     <Content Include="Scripts\thirdparty\bootstrap.min.js" />
     <Content Include="Scripts\thirdparty\jquery-1.9.1.js" />
@@ -90,7 +92,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="Web.sitemap" />
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -102,6 +106,13 @@
     </Compile>
     <Compile Include="CatalogoPrinc.aspx.designer.cs">
       <DependentUpon>CatalogoPrinc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesEmpresa.aspx.cs">
+      <DependentUpon>ClientesEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientesEmpresa.aspx.designer.cs">
+      <DependentUpon>ClientesEmpresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="General\LayoutBasico.Master.cs">
       <DependentUpon>LayoutBasico.Master</DependentUpon>
@@ -123,6 +134,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoEmpresa.aspx.cs">
+      <DependentUpon>InfoEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoEmpresa.aspx.designer.cs">
+      <DependentUpon>InfoEmpresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

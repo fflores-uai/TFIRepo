@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap>
-  <siteMapNode url="Home.aspx" title="Home" description="Inicio">
-    <!--<siteMapNode url="Login.aspx" title="Login" description="Services Page" />-->    
+  <siteMapNode url="Home.aspx" title="Inicio" description="Ir al Inicio">
+      <siteMapNode url="InfoEmpresa.aspx" title="Quiénes Somos" description="Quiénes Somos" />    
   </siteMapNode>
 </siteMap>

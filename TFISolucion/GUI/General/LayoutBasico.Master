@@ -18,7 +18,7 @@
     <div class="container">
     <form id="frmLayoutConBarra" runat="server">
     <!-- Menu -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -37,17 +37,14 @@
                         </div>
                         <img src="../Imagenes/Buscar.png" />
                     </div>
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav navbar-left">
                         <li>
-<%--                            Si ponemos esto funciona igual
+                            <%--Si ponemos esto funciona igual
                             <a><asp:LinkButton CssClass="Propia1" Text="Home" PostBackUrl="~/CatalogoPrinc.aspx" runat="server"></asp:LinkButton></a>--%>
-                            <a href="#">About</a>
+                            <a href="#">Iniciar Sesión</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
+                            <a href="#">Registrarse</a>
                         </li>
                     </ul>
                 </div>
@@ -55,18 +52,6 @@
         </nav>
         
 
-
-            <div class="row"> <%--Nombre Buscar Pedidos--%>
-                <div class="col-md-4">
-                    <a href="#">GENLOYS - Grupos Electrógenos</a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">Buscar</a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">Pedidos</a>
-                </div>
-            </div>
 
             <div class="row">
 			<nav class="navbar navbar-default" role="navigation">
