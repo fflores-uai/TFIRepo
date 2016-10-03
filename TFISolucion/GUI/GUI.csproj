@@ -76,10 +76,12 @@
     <Content Include="fonts\bungee.ttf" />
     <Content Include="General\LayoutGeneral.Master" />
     <Content Include="General\LayoutBasico.Master" />
+    <Content Include="General\LayoutAdministracion.Master" />
     <None Include="Scripts\thirdparty\jquery-1.9.1.intellisense.js" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\Buscar.png" />
     <Content Include="InfoEmpresa.aspx" />
+    <Content Include="Intranet\GestionClientes.aspx" />
     <Content Include="Scripts\thirdparty\bootstrap.js" />
     <Content Include="Scripts\thirdparty\bootstrap.min.js" />
     <Content Include="Scripts\thirdparty\jquery-1.9.1.js" />
@@ -114,6 +116,13 @@
     <Compile Include="ClientesEmpresa.aspx.designer.cs">
       <DependentUpon>ClientesEmpresa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="General\LayoutAdministracion.Master.cs">
+      <DependentUpon>LayoutAdministracion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\LayoutAdministracion.Master.designer.cs">
+      <DependentUpon>LayoutAdministracion.Master</DependentUpon>
+    </Compile>
     <Compile Include="General\LayoutBasico.Master.cs">
       <DependentUpon>LayoutBasico.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,12 +151,18 @@
     <Compile Include="InfoEmpresa.aspx.designer.cs">
       <DependentUpon>InfoEmpresa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Intranet\GestionClientes.aspx.cs">
+      <DependentUpon>GestionClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\GestionClientes.aspx.designer.cs">
+      <DependentUpon>GestionClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controles\" />
     <Folder Include="Estaticas\" />
-    <Folder Include="Intranet\" />
     <Folder Include="Seguridad\" />
   </ItemGroup>
   <ItemGroup>
