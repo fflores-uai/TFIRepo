@@ -19,7 +19,7 @@
     <form id="frmLayoutConBarra" runat="server">
     <!-- Menu -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
@@ -29,15 +29,14 @@
                     </button>
                     <a class="navbar-brand" href="#">GENLOYS - Grupos Electrógenos</a>
                 </div>
-
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="navbar-form navbar-left" role="search">
+                    <div class="nav navbar-form" role="search">
                         <div class="form-group">
                           <input type="text" class="form-control" placeholder="Buscar..">
+                          <img src="../Imagenes/Buscar.png" />
                         </div>
-                        <img src="../Imagenes/Buscar.png" />
                     </div>
-                    <ul class="nav navbar-nav navbar-left">
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
                             <%--Si ponemos esto funciona igual
                             <a><asp:LinkButton CssClass="Propia1" Text="Home" PostBackUrl="~/CatalogoPrinc.aspx" runat="server"></asp:LinkButton></a>--%>
@@ -54,7 +53,7 @@
 
 
             <div class="row">
-			<nav class="navbar navbar-default" role="navigation">
+			<nav class="navbar navbar-default">
 				    <div class="navbar-header">
 					    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="true">
 						    <span class="sr-only">Toggle navigation</span>
