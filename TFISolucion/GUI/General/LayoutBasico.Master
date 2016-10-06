@@ -30,7 +30,7 @@
                     <a class="navbar-brand" href="#">GENLOYS - Grupos Electrógenos</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="nav navbar-form" role="search">
+                    <div class="nav navbar-form navbar-left" role="search">
                         <div class="form-group">
                           <input type="text" class="form-control" placeholder="Buscar..">
                           <img src="../Imagenes/Buscar.png" />
