@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-
+    <script src="../Scripts/thirdparty/jquery-1.9.1.min.js"></script>
     <link href="../Content/thirdparty/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/BaseStyle.css" rel="stylesheet" />
 
@@ -15,7 +15,7 @@
 </head>
 <body>
     <%-- TODO: Cambiar HEADER a gusto --%>
-    <header class="navbar navbar-fixed-top" id="top">
+    <%-- <header class="navbar navbar-fixed-top" id="top">
         <div class="container">
             <div class="navbar-header">
                 <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -33,22 +33,19 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>--%>
 
     <div class="container" id="breadcrumb">
 
         <asp:SiteMapDataSource ID="siteMap" runat="server" ShowStartingNode="true" />
         <asp:SiteMapPath ID="siteMapMaster" runat="server" PathSeparator=" => " RenderCurrentNodeAsLink="false">
         </asp:SiteMapPath>
-
     </div>
 
     <div class="container">
 
         <div id="notifications" runat="server">
-
         </div>
-        
 
         <asp:ContentPlaceHolder ID="bodyContent" runat="server">
         </asp:ContentPlaceHolder>

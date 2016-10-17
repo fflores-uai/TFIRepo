@@ -10,6 +10,6 @@
 namespace TFI.GUI {
     
     
-    public partial class Index {
+    public partial class Default {
     }
 }

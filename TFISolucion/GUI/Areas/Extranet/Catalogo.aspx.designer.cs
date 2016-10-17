@@ -7,18 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TFI.GUI {
+namespace TFI.GUI.Areas.Extranet {
     
     
-    public partial class Login {
-        
-        /// <summary>
-        /// Control btn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn;
+    public partial class Catalogo {
     }
 }

@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Extranet\Catalogo.aspx" />
     <Content Include="Content\BaseStyle.css" />
     <Content Include="Content\thirdparty\bootstrap-theme.css" />
     <Content Include="Content\thirdparty\bootstrap-theme.min.css" />
@@ -73,8 +74,7 @@
     <Content Include="Content\thirdparty\bootstrap.css.map" />
     <Content Include="fonts\bungee.ttf" />
     <None Include="Scripts\thirdparty\jquery-1.9.1.intellisense.js" />
-    <Content Include="Index.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Scripts\thirdparty\bootstrap.js" />
     <Content Include="Scripts\thirdparty\bootstrap.min.js" />
     <Content Include="Scripts\thirdparty\jquery-1.9.1.js" />
@@ -95,19 +95,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Areas\Extranet\Catalogo.aspx.cs">
+      <DependentUpon>Catalogo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Areas\Extranet\Catalogo.aspx.designer.cs">
+      <DependentUpon>Catalogo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared\Error.aspx.cs">
@@ -126,9 +126,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controles\" />
-    <Folder Include="Estaticas\" />
-    <Folder Include="Seguridad\" />
+    <Folder Include="Areas\Intranet\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CORE\CORE.csproj">

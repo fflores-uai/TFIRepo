@@ -2,12 +2,19 @@
 	  |																					  |
 	HOME																				INTRANET
   ___|_______________________________________________________________________				|-> ADMINISTRACION (Sitio)
- |				|			|			|					|				|				|-> CMS -> Gestion de contenidos
-HISTORIA	Clientes	MI_CUENTA	CATALOGO			CONTACTO	COMUNUCACION			|-> GESTION CLIENTE <___
-				____________|___		|													|-> AVISO CRM __________| A ELECCIÓN
-				MOV HIST PERS Registro	INFO(Trx)											|-> REPORTES
-										|-VISA
+ |				|			|			|					|				|				|-> CMS -> Gestion de contenidos PACHU
+HISTORIA	Clientes	MI_CUENTA	CATALOGO(PACHU)		CONTACTO	COMUNiCACION			|-> GESTION CLIENTE <---¬
+				____________|___		|----------------¬					|				|-> AVISO CRM __________| A ELECCIÓN
+				MOV HIST PERS Registro	INFO(Trx)	 	 |					CHAT			|-> REPORTES
+										|-VISA			PROUCTOS
 										|-MERCADO_PAGO
 									APROBACIÓN
 									
+									
 Como usar bootstrap, formularios y asp.net
+
+
+HISTORIA:
+	Quienes somos
+	Vision
+	Mision
