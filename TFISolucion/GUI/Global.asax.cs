@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using TFI.GUI.Helpers;
 
 namespace TFI.GUI
 {
@@ -12,7 +13,11 @@ namespace TFI.GUI
 
         protected void Application_Start(object sender, EventArgs e)
         {
-
+           
+                HttpContext context = HttpContext.Current;
+                TranslateHelper.SetLanguage();
+           
+            
         }
 
         protected void Session_Start(object sender, EventArgs e)
