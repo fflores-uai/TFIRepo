@@ -1,6 +1,6 @@
 ﻿namespace TFI.CORE.Entities
 {
-    public class Usuario
+    public class Usuario : IEntity
     {
         public int ID { get; set; }
         public int CUIT { get; set; }

@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\ActionResource.cs" />
+    <Compile Include="Helpers\MapperExtension.cs" />
     <Compile Include="IConnection.cs" />
+    <Compile Include="Mapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLServer.cs" />
   </ItemGroup>

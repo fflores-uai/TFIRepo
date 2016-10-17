@@ -25,8 +25,8 @@ namespace TFI.GUI
                 Dni = GenerateRandom(),
                 CondicionFiscalID = (int)CondicionFiscal.Options.ConsumidorFinal,
                 UsuarioTipoID = (int)UsuarioTipo.Options.Cliente,
-                NetworkID = txtUser.Text,
-                Clave = txtPassword.Text
+                NetworkID = "dsfsdfsdf",
+                Clave = "sadfasdasds"
             };
 
             //_manager.Create(user);

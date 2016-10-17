@@ -140,10 +140,6 @@
       <Project>{69fba2ed-4236-4620-b74b-aca63d94777b}</Project>
       <Name>CORE</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServerControl1\ServerControl1.csproj">
-      <Project>{E096D120-42AC-4FE0-8780-AAE7F805C743}</Project>
-      <Name>ServerControl1</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
