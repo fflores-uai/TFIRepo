@@ -73,6 +73,7 @@
     <Content Include="Content\thirdparty\bootstrap.css.map" />
     <Content Include="fonts\bungee.ttf" />
     <None Include="Scripts\thirdparty\jquery-1.9.1.intellisense.js" />
+    <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\thirdparty\bootstrap.js" />
@@ -95,6 +96,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\TranslateHelper.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
