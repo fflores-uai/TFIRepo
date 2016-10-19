@@ -7,14 +7,12 @@ namespace TFI.GUI
     public class Global : System.Web.HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)
-        {
-            
+        {            
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            HttpContext context = HttpContext.Current;
-            CultureManager.SetLanguage();
+            CultureManager.UpdateCulture();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

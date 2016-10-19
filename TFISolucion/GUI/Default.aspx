@@ -5,4 +5,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">
 
+    <asp:Label ID="cookie" Text="text" runat="server" />
+
 </asp:Content>

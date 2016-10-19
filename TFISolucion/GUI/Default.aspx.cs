@@ -6,6 +6,7 @@ namespace TFI.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            cookie.Text = (string)Session["lang"];
         }
     }
 }
