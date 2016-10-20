@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Web;
+using TFI.CORE.Managers;
 
 namespace TFI.GUI.Helpers
 {
@@ -9,6 +11,9 @@ namespace TFI.GUI.Helpers
         private const string KEY = "lang";
         private static HttpContext Context { get { return HttpContext.Current; } set { } }
 
+        private static IDictionary<string, string> DIC;
+
+        // Opcional
         public static string CookieCulture
         {
             get { return Context.Request.Cookies[KEY] == null ? (string)null : Context.Request.Cookies[KEY].Value; }
@@ -16,7 +21,7 @@ namespace TFI.GUI.Helpers
         }
 
         /// <summary>
-        /// Cambia el valor de lenguage de la pagina.
+        /// Cambia el valor de lenguage de la pagina, lo guarda en session y ademas cambia el Culture.
         /// </summary>
         /// <param name="language"></param>
         public static void UpdateCulture(string language = null)
@@ -29,6 +34,13 @@ namespace TFI.GUI.Helpers
             CultureInfo culture = new CultureInfo(lang);
             System.Threading.Thread.CurrentThread.CurrentCulture = culture;
             System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+        }
+
+        public static string Translate(this string value)
+        {
+            DIC = LenguageManager.GetDiccionario(KEY);
+
+            return value;
         }
     }
 }

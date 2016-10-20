@@ -51,6 +51,7 @@
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Entities\UsuarioTipo.cs" />
     <Compile Include="Managers\IManager.cs" />
+    <Compile Include="Managers\LenguageManager.cs" />
     <Compile Include="Managers\UsuarioManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
