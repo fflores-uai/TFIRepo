@@ -16,10 +16,10 @@ namespace TFI.Entidades
 		/// <summary>
 		/// Initializes a new instance of the MonedaEmpresaEntidad class.
 		/// </summary>
-		public MonedaEmpresaEntidad(int idMoneda, int cUITEmpresa, DateTime? fecBaja)
+		public MonedaEmpresaEntidad(int idMoneda, int CUIT, DateTime? fecBaja)
 		{
 			this.IdMoneda = idMoneda;
-			this.CUITEmpresa = cUITEmpresa;
+			this.CUIT = CUIT;
 			this.FecBaja = fecBaja;
 		}
 
@@ -32,9 +32,9 @@ namespace TFI.Entidades
 		public int IdMoneda { get; set; }
 
 		/// <summary>
-		/// Gets or sets the CUITEmpresa value.
+		/// Gets or sets the CUIT value.
 		/// </summary>
-		public int CUITEmpresa { get; set; }
+		public int CUIT { get; set; }
 
 		/// <summary>
 		/// Gets or sets the FecBaja value.

@@ -28,7 +28,6 @@ namespace TFI.DAL.DAL
 				new SqlParameter("@Email", usuario.Email),
 				new SqlParameter("@NombreUsuario", usuario.NombreUsuario),
 				new SqlParameter("@Clave", usuario.Clave),
-				new SqlParameter("@CUITEmpresa", usuario.CUITEmpresa)
 			};
 
 			usuario.IdUsuario = (int) SqlClientUtility.ExecuteScalar(SqlClientUtility.connectionStringName, CommandType.StoredProcedure, "UsuarioInsert", parameters);
@@ -53,7 +52,6 @@ namespace TFI.DAL.DAL
 				new SqlParameter("@Email", usuario.Email),
 				new SqlParameter("@NombreUsuario", usuario.NombreUsuario),
 				new SqlParameter("@Clave", usuario.Clave),
-				new SqlParameter("@CUITEmpresa", usuario.CUITEmpresa)
 			};
 
 			SqlClientUtility.ExecuteNonQuery(SqlClientUtility.connectionStringName, CommandType.StoredProcedure, "UsuarioUpdate", parameters);
@@ -62,11 +60,11 @@ namespace TFI.DAL.DAL
 		/// <summary>
 		/// Deletes a record from the Usuario table by its primary key.
 		/// </summary>
-		public void Delete(int cUIT, string nombreUsuario)
+		public void Delete(int CUIT, string nombreUsuario)
 		{
 			SqlParameter[] parameters = new SqlParameter[]
 			{
-				new SqlParameter("@CUIT", cUIT),
+				new SqlParameter("@CUIT", CUIT),
 				new SqlParameter("@NombreUsuario", nombreUsuario)
 			};
 
@@ -89,14 +87,14 @@ namespace TFI.DAL.DAL
 		/// <summary>
 		/// Deletes a record from the Usuario table by a foreign key.
 		/// </summary>
-		public void DeleteAllByCUITEmpresa(int cUITEmpresa)
+		public void DeleteAllByCUIT(int CUIT)
 		{
 			SqlParameter[] parameters = new SqlParameter[]
 			{
-				new SqlParameter("@CUITEmpresa", cUITEmpresa)
+				new SqlParameter("@CUIT", CUIT)
 			};
 
-			SqlClientUtility.ExecuteNonQuery(SqlClientUtility.connectionStringName, CommandType.StoredProcedure, "UsuarioDeleteAllByCUITEmpresa", parameters);
+			SqlClientUtility.ExecuteNonQuery(SqlClientUtility.connectionStringName, CommandType.StoredProcedure, "UsuarioDeleteAllByCUIT", parameters);
 		}
 
 		/// <summary>
@@ -115,11 +113,11 @@ namespace TFI.DAL.DAL
 		/// <summary>
 		/// Selects a single record from the Usuario table.
 		/// </summary>
-		public UsuarioEntidad Select(int cUIT, string nombreUsuario)
+		public UsuarioEntidad Select(int CUIT, string nombreUsuario)
 		{
 			SqlParameter[] parameters = new SqlParameter[]
 			{
-				new SqlParameter("@CUIT", cUIT),
+				new SqlParameter("@CUIT", CUIT),
 				new SqlParameter("@NombreUsuario", nombreUsuario)
 			};
 
@@ -176,14 +174,14 @@ namespace TFI.DAL.DAL
 		/// <summary>
 		/// Selects all records from the Usuario table by a foreign key.
 		/// </summary>
-		public List<UsuarioEntidad> SelectAllByCUITEmpresa(int cUITEmpresa)
+		public List<UsuarioEntidad> SelectAllByCUIT(int CUIT)
 		{
 			SqlParameter[] parameters = new SqlParameter[]
 			{
-				new SqlParameter("@CUITEmpresa", cUITEmpresa)
+				new SqlParameter("@CUIT", CUIT)
 			};
 
-            using (DataTable dt = SqlClientUtility.ExecuteDataTable(SqlClientUtility.connectionStringName, CommandType.StoredProcedure, "UsuarioSelectAllByCUITEmpresa", parameters))
+            using (DataTable dt = SqlClientUtility.ExecuteDataTable(SqlClientUtility.connectionStringName, CommandType.StoredProcedure, "UsuarioSelectAllByCUIT", parameters))
 			{
                 List<UsuarioEntidad> lista = new List<UsuarioEntidad>();
                 lista = Mapeador.Mapear<UsuarioEntidad>(dt);
