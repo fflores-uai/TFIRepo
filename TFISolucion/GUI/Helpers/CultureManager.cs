@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Web;
 using TFI.CORE.Managers;
+using TFI.GUI.Models;
 
 namespace TFI.GUI.Helpers
 {
     public static class CultureManager
     {
         private const string KEY = "lang";
+        public const string DEFAULT_LANGUAGE = "es";
+        public const string KEY_DICCIONARIO = "dic";
         private static HttpContext Context { get { return HttpContext.Current; } set { } }
-
-        private static IDictionary<string, string> DIC;
 
         // Opcional
         public static string CookieCulture
@@ -26,21 +26,35 @@ namespace TFI.GUI.Helpers
         /// <param name="language"></param>
         public static void UpdateCulture(string language = null)
         {
-            //Usando cookie de session:
-            var lang = language != null ? language : "es";
+            //Guardo Cookie en Session:
+            var lang = !string.IsNullOrEmpty(language)
+                ? language
+                : DEFAULT_LANGUAGE;
             Context.Session[KEY] = lang.ToLower();
 
             //En caso de usar .resx
-            CultureInfo culture = new CultureInfo(lang);
-            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
-            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+            UpdateCultureInfo(lang);
+
+            UpdateDiccionario(lang);
         }
 
         public static string Translate(this string value)
         {
-            DIC = LenguageManager.GetDiccionario(KEY);
+            string translated;
+            return (Cache.Diccionario.TryGetValue(value, out translated)) ? translated : value;
+        }
 
-            return value;
+        public static void UpdateDiccionario(string language)
+        {
+            Context.Cache[KEY_DICCIONARIO] = Cache.Diccionario = LenguageManager.UpdateDiccionario(language);
+        }
+
+        public static void UpdateCultureInfo(string language)
+        {
+            CultureInfo culture = new CultureInfo(language);
+
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
         }
     }
 }

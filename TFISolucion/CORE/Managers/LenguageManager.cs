@@ -1,17 +1,46 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace TFI.CORE.Managers
 {
     public class LenguageManager
     {
-        public static IDictionary<string, string> GetDiccionario(string language)
+        public static IDictionary<string, string> UpdateDiccionario(string language)
         {
-            var dic = new Dictionary<string, string>();
+            var diccionario = new Dictionary<string, string>();
 
-            dic.Add("nombre", "Name");
-            dic.Add("apellido", "Apellido");
+            var leng = FindByLenguage(language)
+                            .ToDictionary(key => key.Control,
+                                          val => val.Value);
 
-            return dic;
+            diccionario.Concat(leng);
+
+            return diccionario;
+        }
+
+        private static IEnumerable<Entities.Lenguaje> FindByLenguage(string lenguage)
+        {
+            var language = new List<Entities.Lenguaje>();
+
+            //MAPPER.QUERY.SELECTALLL
+
+            //MOCK EJEMPLO
+            language.Add(new Entities.Lenguaje
+                {
+                    Control = "Nombre",
+                    IsoCode = "en",
+                    Value = "Name"
+                });
+
+            language.Add(new Entities.Lenguaje
+                {
+                    Control = "Nombre",
+                    IsoCode = "es",
+                    Value = "Nombre"
+                });
+
+            return language
+                        .Where(x => x.IsoCode == lenguage);
         }
     }
 }

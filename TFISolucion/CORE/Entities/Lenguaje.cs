@@ -2,7 +2,8 @@
 {
     public class Lenguaje
     {
-        public int ID { get; set; }
+        public string Control { get; set; }
         public string IsoCode { get; set; }
+        public string Value { get; set; }
     }
 }

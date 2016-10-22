@@ -5,6 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">
 
-    <asp:Label ID="cookie" Text="text" runat="server" />
+    <input id="lblNombre" value="nombre" runat="server"/>
 
+    <label id="lblIngles" runat="server">Nombre</label>
 </asp:Content>
