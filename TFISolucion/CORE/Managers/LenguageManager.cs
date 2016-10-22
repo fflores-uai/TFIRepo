@@ -13,7 +13,10 @@ namespace TFI.CORE.Managers
                             .ToDictionary(key => key.Control,
                                           val => val.Value);
 
-            diccionario.Concat(leng);
+            if (leng.Any())
+            {
+                diccionario = leng;
+            }
 
             return diccionario;
         }
