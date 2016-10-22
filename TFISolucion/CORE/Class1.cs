@@ -17,7 +17,6 @@ namespace TFI.CORE
             List<UsuarioEntidad> listaPrueaba = GestorUsuario.SelectAll();
             return listaPrueaba;
 
-
         }
     }
 }
